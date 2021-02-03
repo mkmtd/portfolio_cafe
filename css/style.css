@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+* ul {
+  list-style: none;
+}
+
+* a {
+  color: black;
+  text-decoration: none;
+}
+
+.first_view img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 25%;
+     object-position: 25%;
+}
+
+.first_view h1 {
+  position: absolute;
+  top: 22.5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 55vh;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 10vh;
+  letter-spacing: 1vh;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+@media (min-width: 640px) {
+  .first_view img {
+    height: 70vh;
+    margin: 15vh 0;
+  }
+  .first_view h1 {
+    left: 25vw;
+  }
+}
+
+header {
+  line-height: 1;
+}
+
+header h1 {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Nothing You Could Do", cursive;
+}
+
+header #nav ul {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  padding: calc(4rem + 32px) 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+header #nav ul li {
+  padding: calc((100vh - (8rem + 64px) - (32px * 4)) / 8);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header #nav ul li a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header #nav.active ul {
+  top: 0;
+  right: 0;
+}
+
+header #hamburger_btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 100;
+  height: 32px;
+  width: 64px;
+}
+
+header #hamburger_btn div {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  height: 5px;
+  width: 64px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+header #hamburger_btn :nth-of-type(1) {
+  top: calc(2rem + 6px);
+}
+
+header #hamburger_btn :nth-of-type(2) {
+  top: calc(2rem + 21px);
+}
+
+@media (min-width: 640px) {
+  header {
+    text-align: center;
+  }
+  header h1 {
+    top: 2.5vh;
+    left: 0;
+    width: 100%;
+    color: black;
+    font-size: 4.5vh;
+  }
+  header #nav ul {
+    position: absolute;
+    top: 9.5vh;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 2.5vh;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+  header #nav ul li {
+    padding: 0;
+    margin: 0 4rem;
+    font-size: 2.5vh;
+    font-weight: normal;
+  }
+  header #nav ul li a {
+    color: black;
+  }
+  header #nav ul li a:hover {
+    -webkit-transform: 3s ease-in-out;
+            transform: 3s ease-in-out;
+  }
+  header #nav ul li:hover {
+    -webkit-animation-name: wobble;
+            animation-name: wobble;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  header #hamburger_btn {
+    display: none;
+  }
+}
+
+main {
+  width: 90%;
+  margin: 0 5%;
+  line-height: 1.5;
+  text-align: center;
+}
+
+main section {
+  margin: 7.5rem 0;
+}
+
+main section h2 {
+  font-size: 6.25vh;
+  line-height: 1;
+}
+
+main section .illustration {
+  height: 5vh;
+  margin: 1.5rem 0;
+  -webkit-animation: rotation 5s linear infinite;
+          animation: rotation 5s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#menu .categorized .cate {
+  margin-bottom: 1rem;
+}
+
+#menu .categorized .cate h3 {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  #menu .categorized {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#access .googlemap {
+  height: 50vh;
+}
+
+#access .googlemap iframe {
+  height: 100%;
+  width: 100%;
+}
+
+#reservation .tel {
+  width: 90%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  border: solid 0.75vh black;
+  border-radius: 2.5vh;
+}
+
+#reservation .tel::first-line {
+  font-size: 3.75vh;
+  font-weight: bolder;
+}
+
+@media (min-width: 640px) {
+  #reservation .tel {
+    width: 37.5%;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  padding: 2rem 0;
+}
+/*# sourceMappingURL=style.css.map */
